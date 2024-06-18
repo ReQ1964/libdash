@@ -13,9 +13,13 @@
     "prettier": "^3.2.5",
     "turbo": "^2.0.4"
   },
-  "packageManager": "pnpm@8.15.6",
   "engines": {
     "node": ">=18"
   },
-  "name": "kitchen-sink"
+  "name": "kitchen-sink",
+  "packageManager": "npm@10.8.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
 }
