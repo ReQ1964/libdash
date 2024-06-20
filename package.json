@@ -10,16 +10,19 @@
     "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
-    "prettier": "^3.2.5",
+    "prettier": "^3.3.2",
     "turbo": "^2.0.4"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
-  "name": "kitchen-sink",
+  "name": "libdash",
   "packageManager": "npm@10.8.0",
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "node": "^22.3.0"
+  }
 }
