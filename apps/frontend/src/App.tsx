@@ -1,5 +1,4 @@
-const App = () => {
-  console.log('a');
+const App = (): React.JSX.Element => {
   return <div>App</div>;
 };
 

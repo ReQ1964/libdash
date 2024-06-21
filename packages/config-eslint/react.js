@@ -33,6 +33,7 @@ module.exports = {
     ],
     'unicorn/filename-case': 'off',
     'import/no-default-export': 'off',
+    'no-console': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
   },
 };
