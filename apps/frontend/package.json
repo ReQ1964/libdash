@@ -20,6 +20,7 @@
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "@repo/vitest-presets": "*",
+    "@repo/shared-types": "*",
     "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^16.0.0",
     "@types/react": "^18.2.62",
