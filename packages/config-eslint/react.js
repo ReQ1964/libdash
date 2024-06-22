@@ -7,6 +7,7 @@ module.exports = {
     '@vercel/style-guide/eslint/browser',
     '@vercel/style-guide/eslint/typescript',
     '@vercel/style-guide/eslint/react',
+    '@tanstack/eslint-plugin-query',
   ].map(require.resolve),
   parserOptions: {
     project,
