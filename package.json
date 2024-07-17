@@ -23,7 +23,6 @@
     "packages/*"
   ],
   "dependencies": {
-    "node": "^22.3.0",
-    "zustand": "^4.5.2"
+    "node": "^22.3.0"
   }
 }
