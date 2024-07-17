@@ -1,5 +1,9 @@
 import { create } from 'zustand';
 
-const useStore = create((set) => ({}));
+type State = {};
+
+type Actions = {};
+
+const useStore = create<State & Actions>((set) => ({}));
 
 export default useStore;
