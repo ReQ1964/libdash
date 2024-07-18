@@ -1,9 +1,6 @@
 import React, { Suspense } from 'react';
-import './index.css';
-import '@radix-ui/themes/styles.css';
 import { createRoot } from 'react-dom/client';
 import App from './App';
-import './libs/i18n/config';
 
 const el = document.getElementById('root');
 if (el) {
