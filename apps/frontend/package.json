@@ -27,8 +27,9 @@
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
-    "@repo/shared-types": "*",
     "@repo/typescript-config": "*",
+    "@repo/shared-types": "*",
+    "@repo/shared-schemas": "*",
     "@tanstack/react-query": "^5.45.1",
     "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^16.0.0",
