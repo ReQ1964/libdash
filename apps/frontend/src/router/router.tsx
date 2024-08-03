@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import MainLayout from '@/layouts/MainLayout';
 import ErrorPage from '@/router/ErrorPage/ErrorPage';
 import { BASE_PAGE_PATH } from '@/constants/paths';
+import DashboardPage from '@/pages/Dashboard/DashboardPage';
 
 const router = createBrowserRouter([
   {
@@ -10,7 +11,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: BASE_PAGE_PATH,
-        element: <ErrorPage />,
+        element: <DashboardPage />,
       },
     ],
   },

@@ -12,12 +12,10 @@ const queryClient = new QueryClient();
 const App = (): React.JSX.Element => {
   return (
     <QueryClientProvider client={queryClient}>
-      <React.StrictMode>
-        <Theme>
-          <RouterProvider router={router} />
-          <ThemePanel />
-        </Theme>
-      </React.StrictMode>
+      <Theme>
+        <RouterProvider router={router} />
+        <ThemePanel />
+      </Theme>
     </QueryClientProvider>
   );
 };
