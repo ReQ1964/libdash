@@ -14,7 +14,7 @@ const App = (): React.JSX.Element => {
     <QueryClientProvider client={queryClient}>
       <Theme accentColor="bronze">
         <RouterProvider router={router} />
-        <ThemePanel />
+        {/* <ThemePanel /> */}
       </Theme>
     </QueryClientProvider>
   );
