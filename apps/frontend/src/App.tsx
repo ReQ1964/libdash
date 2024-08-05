@@ -12,7 +12,7 @@ const queryClient = new QueryClient();
 const App = (): React.JSX.Element => {
   return (
     <QueryClientProvider client={queryClient}>
-      <Theme>
+      <Theme accentColor="bronze">
         <RouterProvider router={router} />
         <ThemePanel />
       </Theme>
