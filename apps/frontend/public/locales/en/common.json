@@ -1,0 +1,18 @@
+{
+  "settings": "settings",
+  "accountSettings": "account settings",
+  "reader": "reader",
+  "readers": "readers",
+  "addReader": "add reader",
+  "editReader": "edit reader",
+  "book": "book",
+  "books": "books",
+  "addBook": "add book",
+  "addNewBook": "add a new book",
+  "editBook": "edit book",
+  "overview": "overview",
+  "eg": "e.g.",
+  "example": "example",
+  "logout": "log out",
+  "login": "Log In"
+}

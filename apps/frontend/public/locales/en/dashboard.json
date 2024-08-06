@@ -1,0 +1,17 @@
+{
+  "topbar": {
+    "settings": "$t(common:settings)",
+    "accountSettings": "$t(common:accountSettings)",
+    "logout": "$t(common:logout)"
+  },
+  "sidebar": {
+    "overview": "$t(common:overview)",
+    "readers": "$t(common:readers)",
+    "readersList": "readers list",
+    "addReader": "$t(common:addReader)",
+    "library": "library",
+    "booksList": "books list",
+    "addBook": "$t(common:addBook)",
+    "settings": "$t(common:settings)"
+  }
+}
