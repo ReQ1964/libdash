@@ -1,6 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import TopBar from './TopBar';
-import DialogDemo from './Sidebar';
+import TopBar from './Navigation/TopBar/TopBar';
 
 const MainLayout = () => {
   return (

@@ -3,8 +3,9 @@ import { Text } from '@radix-ui/themes';
 import HamburgerMenuIcon from '@/assets/icons/abstract/HamburgerMenuIcon';
 import DoubleArrowLeft from '@/assets/icons/arrows/DoubleArrowLeft';
 import logo from '@/assets/imgs/logo.png';
+import SidebarItemList from './SidebarItemList';
 
-const DialogDemo = () => {
+const Sidebar = () => {
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
@@ -14,7 +15,10 @@ const DialogDemo = () => {
       </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="bg-blacka-3 fixed inset-0" />
-        <Dialog.Content className="bg-bronze-2 dark:bg-bronzedark-8 absolute left-0 top-0 w-60 h-full data-[state=open]:animate-slideOutFromLeft data-[state=closed]:animate-slideInToLeft">
+        <Dialog.Content
+          className="bg-bronze-2 dark:bg-bronzedark-8 absolute left-0 top-0 w-60 h-full data-[state=open]:animate-slideOutFromLeft data-[state=closed]:animate-slideInToLeft"
+          aria-describedby={undefined}
+        >
           <Dialog.Title>
             <img src={logo} width={200} height={80} className="my-0 mx-auto" />
           </Dialog.Title>
@@ -24,11 +28,11 @@ const DialogDemo = () => {
             </Text>
           </Dialog.Close>
 
-          <Dialog.Description></Dialog.Description>
+          <SidebarItemList />
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
   );
 };
 
-export default DialogDemo;
+export default Sidebar;
