@@ -4,6 +4,8 @@ import HamburgerMenuIcon from '@/assets/icons/abstract/HamburgerMenuIcon';
 import DoubleArrowLeft from '@/assets/icons/arrows/DoubleArrowLeft';
 import logo from '@/assets/imgs/logo.png';
 import SidebarItemList from './SidebarItemList';
+import { NavLink } from 'react-router-dom';
+import { DASHBOARD_PATH } from '@/constants/paths';
 
 const Sidebar = () => {
   return (
@@ -16,11 +18,18 @@ const Sidebar = () => {
       <Dialog.Portal>
         <Dialog.Overlay className="bg-blacka-3 fixed inset-0" />
         <Dialog.Content
-          className="bg-bronze-2 dark:bg-bronzedark-8 absolute left-0 top-0 w-60 h-full data-[state=open]:animate-slideOutFromLeft data-[state=closed]:animate-slideInToLeft"
+          className="bg-bronze-2 dark:bg-bronzedark-8 absolute left-0 top-0 w-60 h-full data-[state=open]:animate-slideOutFromLeft data-[state=closed]:animate-slideInToLeft border-solid border-gray-7 border-r"
           aria-describedby={undefined}
         >
           <Dialog.Title>
-            <img src={logo} width={200} height={80} className="my-0 mx-auto" />
+            <NavLink to={DASHBOARD_PATH}>
+              <img
+                src={logo}
+                width={200}
+                height={80}
+                className="my-0 mx-auto"
+              />
+            </NavLink>
           </Dialog.Title>
           <Dialog.Close>
             <Text as="p" className="flex align-middle absolute top-3 right-3">

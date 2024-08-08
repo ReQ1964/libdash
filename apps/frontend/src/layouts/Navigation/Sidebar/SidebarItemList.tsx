@@ -1,13 +1,14 @@
 import * as Accordion from '@radix-ui/react-accordion';
 import useSidebarItems from './useSidebarItems';
-import { Box } from '@radix-ui/themes';
+import { Flex } from '@radix-ui/themes';
+import { NavLink } from 'react-router-dom';
 
 const SidebarItemList = () => {
   const sidebarListItems = useSidebarItems();
 
   return (
     <Accordion.Root
-      className="flex align-middle flex-col justify-center gap-4 p-4"
+      className="flex align-middle flex-col justify-center text-gray-12"
       type="multiple"
     >
       {sidebarListItems.map((item) => {
@@ -15,35 +16,46 @@ const SidebarItemList = () => {
           return (
             <Accordion.Item
               key={item.id}
-              className="AccordionItem"
               value={`item-${item.id}`}
+              className="flex flex-col"
             >
-              <Accordion.Trigger>
-                {item.icon}
-                {item.text}
+              <Accordion.Trigger className="flex hover:bg-blacka-1 p-4 py-5">
+                <p className="w-1/4 m-auto flex justify-start">{item.icon}</p>
+                <p className="w-3/4 m-auto flex justify-start">{item.text}</p>
               </Accordion.Trigger>
               <Accordion.Content>
                 {item.dropdownItems.map((subItem) => (
-                  <Box key={subItem.id}>
-                    {subItem.icon}
-                    {subItem.text}
-                  </Box>
+                  <NavLink to={subItem.path} className="hover:bg-blacka-1">
+                    <Flex
+                      key={subItem.id}
+                      className="flex flex-row hover:bg-blacka-1 px-9 py-5 w-full"
+                    >
+                      <p className="w-1/4 m-auto flex justify-start">
+                        {subItem.icon}
+                      </p>
+                      <p className="w-3/4 m-auto flex justify-start">
+                        {subItem.text}
+                      </p>
+                    </Flex>
+                  </NavLink>
                 ))}
               </Accordion.Content>
             </Accordion.Item>
           );
         }
         return (
-          <Accordion.Item
-            key={item.id}
-            className="AccordionItem"
-            value={`item-${item.id}`}
-          >
-            <Accordion.Trigger>
-              {item.icon}
-              {item.text}
-            </Accordion.Trigger>
-          </Accordion.Item>
+          <NavLink to={item.path} className="hover:bg-blacka-1">
+            <Accordion.Item
+              key={item.id}
+              value={`item-${item.id}`}
+              className="flex flex-col align-middle p-4  py-5"
+            >
+              <Accordion.Trigger className="flex">
+                <p className="w-1/4 m-auto flex justify-start">{item.icon}</p>
+                <p className="w-3/4 m-auto flex justify-start">{item.text}</p>
+              </Accordion.Trigger>
+            </Accordion.Item>
+          </NavLink>
         );
       })}
     </Accordion.Root>

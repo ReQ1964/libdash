@@ -19,12 +19,13 @@ import { useTranslation } from 'react-i18next';
 
 interface SidebarBasicListItemType {
   id: number;
-  path?: string;
+  path: string;
   text: string;
   icon: ReactElement;
 }
 
-interface SidebarDropdownListItemType extends SidebarBasicListItemType {
+interface SidebarDropdownListItemType
+  extends Omit<SidebarBasicListItemType, 'path'> {
   dropdownItems: SidebarBasicListItemType[];
 }
 
@@ -40,7 +41,7 @@ const useSidebarItems = (): SidebarListItemsType => {
     {
       id: 1,
       path: DASHBOARD_PATH,
-      text: t('sidebar.overview'),
+      text: t('sidebar.overview', { format: 'capitalise' }),
       icon: <DashboardIcon />,
     },
     {

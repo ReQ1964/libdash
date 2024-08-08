@@ -3,8 +3,8 @@ import React from 'react';
 const LibraryListIcon = () => {
   return (
     <svg
-      width="26"
-      height="26"
+      width="23"
+      height="23"
       viewBox="0 0 512 512"
       xmlns="http://www.w3.org/2000/svg"
     >
