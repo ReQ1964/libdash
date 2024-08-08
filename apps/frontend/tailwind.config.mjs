@@ -37,14 +37,6 @@ export default {
             height: '0',
           },
         },
-        arrowRotate: {
-          from: {
-            transform: 'rotate(0deg)',
-          },
-          to: {
-            transform: 'rotate(180deg)',
-          },
-        },
       },
       animation: {
         slideOutFromLeft:
@@ -52,7 +44,6 @@ export default {
         slideInToLeft: 'slideInToLeft 0.2s cubic-bezier(0.42, 0, 0.58, 1)',
         slideDown: 'slideDown 0.2s cubic-bezier(0.87, 0, 0.13, 1)',
         slideUp: 'slideUp 0.2s cubic-bezier(0.87, 0, 0.13, 1)',
-        arrowRotate: 'arrowRotate 0.2s (0.87, 0, 0.13, 1)',
       },
     },
   },
