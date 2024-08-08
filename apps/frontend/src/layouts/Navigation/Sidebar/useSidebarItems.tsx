@@ -17,27 +17,24 @@ import LibraryAddIcon from '@/assets/icons/navigation/books/LibraryAddIcon';
 import SettingsIcon from '@/assets/icons/navigation/SettingsIcon';
 import { useTranslation } from 'react-i18next';
 
-interface SidebarBasicListItemType {
+export interface SidebarNoDropdownItemType {
   id: number;
   path: string;
   text: string;
   icon: ReactElement;
 }
 
-interface SidebarDropdownListItemType
-  extends Omit<SidebarBasicListItemType, 'path'> {
-  dropdownItems: SidebarBasicListItemType[];
+export interface SidebarDropdownItemType
+  extends Omit<SidebarNoDropdownItemType, 'path'> {
+  dropdownItems: SidebarNoDropdownItemType[];
 }
 
-export type SidebarListItemsType = (
-  | SidebarBasicListItemType
-  | SidebarDropdownListItemType
-)[];
+type SidebarListItemType = SidebarNoDropdownItemType | SidebarDropdownItemType;
 
-const useSidebarItems = (): SidebarListItemsType => {
+const useSidebarItems = (): SidebarListItemType[] => {
   const { t } = useTranslation(['dashboard']);
 
-  return [
+  const sidebarItems: SidebarListItemType[] = [
     {
       id: 1,
       path: DASHBOARD_PATH,
@@ -89,6 +86,8 @@ const useSidebarItems = (): SidebarListItemsType => {
       icon: <SettingsIcon />,
     },
   ];
+
+  return sidebarItems;
 };
 
 export default useSidebarItems;
