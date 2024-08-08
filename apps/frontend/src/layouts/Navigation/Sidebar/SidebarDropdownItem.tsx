@@ -9,12 +9,16 @@ const SidebarDropdownItem = ({
   text,
   dropdownItems,
 }: SidebarDropdownItemType) => (
-  <Accordion.Item key={id} value={`item-${id}`} className="flex flex-col">
+  <Accordion.Item
+    key={id}
+    value={`item-${id}`}
+    className="flex flex-col overflow-hidden"
+  >
     <Accordion.Trigger className="flex p-4 py-5 hover:bg-blacka-2">
       <p className="w-1/4 m-auto flex justify-start">{icon}</p>
       <p className="w-3/4 m-auto flex justify-start">{text}</p>
     </Accordion.Trigger>
-    <Accordion.Content>
+    <Accordion.Content className="radix-state-open:animate-slideDown radix-state-closed:animate-slideUp ">
       {dropdownItems.map((subItem) => (
         <NavLink
           key={subItem.id}

@@ -18,7 +18,7 @@ const Sidebar = () => {
       <Dialog.Portal>
         <Dialog.Overlay className="bg-blacka-3 fixed inset-0" />
         <Dialog.Content
-          className="bg-bronze-2 dark:bg-bronzedark-8 absolute left-0 top-0 w-60 h-full data-[state=open]:animate-slideOutFromLeft data-[state=closed]:animate-slideInToLeft border-solid border-gray-7 border-r"
+          className="bg-bronze-2 dark:bg-bronzedark-8 absolute left-0 top-0 w-60 h-full radix-state-open:animate-slideOutFromLeft radix-state-closed:animate-slideInToLeft border-solid border-gray-7 border-r"
           aria-describedby={undefined}
         >
           <Dialog.Title>
