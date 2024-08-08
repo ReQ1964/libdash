@@ -4,8 +4,8 @@ const LibraryIcon = () => {
   return (
     <svg
       fill="#000000"
-      width="32"
-      height="32"
+      width="26"
+      height="26"
       viewBox="0 0 36 36"
       version="1.1"
       preserveAspectRatio="xMidYMid meet"
