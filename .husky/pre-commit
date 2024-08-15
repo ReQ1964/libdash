@@ -1,0 +1,31 @@
+#!/usr/bin/env sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo '🏗️👷 Styling, testing and building your project before committing'
+
+# Check ESLint Standards
+npm run lint ||
+(
+			echo '
+			ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
+			false; 
+)
+
+# Check tsconfig standards
+npm run typecheck ||
+(
+	echo '
+			Typescript Types Check Failed. Make the required changes listed above, add changes and try to commit again.'
+	false;
+)
+
+# Check tests
+npm run test ||
+(
+	echo '
+			Vitest Tests Check Failed. Make the required changes listed above, add changes and try to commit again.'
+	false;
+)
+
+
+echo '✅ All looks good'
