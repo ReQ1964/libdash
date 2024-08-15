@@ -1,8 +1,8 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
+import { DASHBOARD_PATH } from '@/constants/paths';
 import MainLayout from '@/layouts/MainLayout';
-import ErrorPage from '@/router/ErrorPage/ErrorPage';
-import { BASE_PAGE_PATH, DASHBOARD_PATH } from '@/constants/paths';
 import DashboardPage from '@/pages/Dashboard/DashboardPage';
+import ErrorPage from '@/router/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {

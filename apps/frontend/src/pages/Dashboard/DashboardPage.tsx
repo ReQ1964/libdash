@@ -1,4 +1,4 @@
-const DashboardPage = () => {
+const DashboardPage = (): JSX.Element => {
   return <div>DashboardPage</div>;
 };
 

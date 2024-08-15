@@ -1,12 +1,12 @@
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-import { BrowserRouter } from 'react-router-dom';
-import SidebarDropdownItem from './SidebarDropdownItem';
 import * as Accordion from '@radix-ui/react-accordion';
-import {
+import { render, screen } from '@testing-library/react';
+import { userEvent } from '@testing-library/user-event';
+import { BrowserRouter } from 'react-router-dom';
+import type {
   SidebarDropdownItemType,
   SidebarNoDropdownItemType,
 } from '../useSidebarItems';
+import SidebarDropdownItem from './SidebarDropdownItem';
 
 describe('SidebarDropdownItem', () => {
   const user = userEvent.setup();
@@ -36,7 +36,7 @@ describe('SidebarDropdownItem', () => {
   beforeEach(() => {
     render(
       <BrowserRouter>
-        <Accordion.Root type="single" collapsible>
+        <Accordion.Root collapsible type="single">
           <SidebarDropdownItem {...mockItem} />
         </Accordion.Root>
       </BrowserRouter>,
@@ -55,7 +55,7 @@ describe('SidebarDropdownItem', () => {
 
   it('should display dropdown items when the trigger is clicked', async () => {
     const trigger = screen.getByText(/main item/i);
-    await userEvent.click(trigger);
+    await user.click(trigger);
 
     expect(screen.getByText(/subitem 1/i)).toBeInTheDocument();
     expect(screen.getByText(/subitem 2/i)).toBeInTheDocument();
@@ -63,7 +63,7 @@ describe('SidebarDropdownItem', () => {
 
   it('should navigate to the correct path when a dropdown item is clicked', async () => {
     const trigger = screen.getByText(/main item/i);
-    await userEvent.click(trigger);
+    await user.click(trigger);
 
     const subItemLink = screen.getByText(/subitem 1/i).closest('a');
     expect(subItemLink).toHaveAttribute('href', '/subitem1');

@@ -1,10 +1,10 @@
-const DashboardIcon = () => {
+const DashboardIcon = (): JSX.Element => {
   return (
     <svg
       fill="#000000"
-      width="26"
       height="26"
       viewBox="0 0 16 16"
+      width="26"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path d="M1.75 13.25V1.5H.5v12a1.24 1.24 0 0 0 1.22 1H15.5v-1.25z" />

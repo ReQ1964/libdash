@@ -1,17 +1,17 @@
 import * as Accordion from '@radix-ui/react-accordion';
 import { NavLink } from 'react-router-dom';
-import { SidebarNoDropdownItemType } from '../useSidebarItems';
+import type { SidebarNoDropdownItemType } from '../useSidebarItems';
 
 const SidebarNoDropdownItem = ({
   id,
   icon,
   text,
   path,
-}: SidebarNoDropdownItemType) => (
-  <NavLink to={path} className="hover:bg-blacka-2">
+}: SidebarNoDropdownItemType): JSX.Element => (
+  <NavLink className="hover:bg-blacka-2" to={path}>
     <Accordion.Item
-      value={`item-${id}`}
       className="flex flex-col align-middle p-4 py-5"
+      value={`item-${id}`}
     >
       <Accordion.Trigger className="flex">
         <p className="w-1/4 m-auto flex justify-start">{icon}</p>

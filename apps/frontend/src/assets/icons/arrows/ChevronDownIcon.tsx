@@ -1,19 +1,23 @@
-const ChevronDownIcon = ({ className }: { className: string }) => {
+interface IconProps {
+  className: string;
+}
+
+const ChevronDownIcon = ({ className }: IconProps): JSX.Element => {
   return (
     <svg
-      width="22"
+      className={className}
+      fill="none"
       height="22"
       viewBox="0 0 24 24"
-      fill="none"
+      width="22"
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
     >
       <path
         d="M6 9L12 15L18 9"
         stroke="#000000"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
       />
     </svg>
   );

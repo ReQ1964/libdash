@@ -1,5 +1,5 @@
-import tailwindcssRadixColors from 'tailwindcss-radix-colors';
 import tailwindcssRadix from 'tailwindcss-radix';
+import tailwindcssRadixColors from 'tailwindcss-radix-colors';
 
 /** @type {import("tailwindcss").Config} */
 export default {

@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-empty-interface -- still not built */
 import { create } from 'zustand';
 
-type State = {};
+interface ZustandState {}
 
-type Actions = {};
+interface Actions {}
 
-const useStore = create<State & Actions>((set) => ({}));
+const useStore = create<ZustandState & Actions>((_set) => ({}));
 
 export default useStore;

@@ -1,4 +1,13 @@
-import { ReactElement } from 'react';
+import type { ReactElement } from 'react';
+import { useTranslation } from 'react-i18next';
+import LibraryAddIcon from '@/assets/icons/navigation/books/LibraryAddIcon';
+import LibraryIcon from '@/assets/icons/navigation/books/LibraryIcon';
+import LibraryListIcon from '@/assets/icons/navigation/books/LibraryListIcon';
+import DashboardIcon from '@/assets/icons/navigation/DashboardIcon';
+import ReaderAddIcon from '@/assets/icons/navigation/readers/ReaderAddIcon';
+import ReaderIcon from '@/assets/icons/navigation/readers/ReaderIcon';
+import ReaderListIcon from '@/assets/icons/navigation/readers/ReaderListIcon';
+import SettingsIcon from '@/assets/icons/navigation/SettingsIcon';
 import {
   DASHBOARD_PATH,
   READERS_PATH,
@@ -7,15 +16,6 @@ import {
   ADD_BOOK_PATH,
   SETTINGS_PATH,
 } from '@/constants/paths';
-import DashboardIcon from '@/assets/icons/navigation/DashboardIcon';
-import ReaderIcon from '@/assets/icons/navigation/readers/ReaderIcon';
-import ReaderListIcon from '@/assets/icons/navigation/readers/ReaderListIcon';
-import ReaderAddIcon from '@/assets/icons/navigation/readers/ReaderAddIcon';
-import LibraryIcon from '@/assets/icons/navigation/books/LibraryIcon';
-import LibraryListIcon from '@/assets/icons/navigation/books/LibraryListIcon';
-import LibraryAddIcon from '@/assets/icons/navigation/books/LibraryAddIcon';
-import SettingsIcon from '@/assets/icons/navigation/SettingsIcon';
-import { useTranslation } from 'react-i18next';
 
 export interface SidebarNoDropdownItemType {
   id: number;

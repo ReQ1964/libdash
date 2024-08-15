@@ -1,19 +1,20 @@
 import * as Accordion from '@radix-ui/react-accordion';
-import { NavLink } from 'react-router-dom';
 import { Flex } from '@radix-ui/themes';
-import { SidebarDropdownItemType } from '../useSidebarItems';
-import ChevronDownIcon from '@/assets/icons/arrows/ChevronDownIcon';
+import { NavLink } from 'react-router-dom';
+import ChevronDownIcon from '@/assets/icons/arrows/ChevronDownIcon'; // Internal import
+import type { SidebarDropdownItemType } from '../useSidebarItems'; // Type import
+
 
 const SidebarDropdownItem = ({
   id,
   icon,
   text,
   dropdownItems,
-}: SidebarDropdownItemType) => (
+}: SidebarDropdownItemType): JSX.Element => (
   <Accordion.Item
+    className="flex flex-col overflow-hidden"
     key={id}
     value={`item-${id}`}
-    className="flex flex-col overflow-hidden"
   >
     <Accordion.Trigger className="flex p-4 py-5 hover:bg-blacka-2 group">
       <p className="w-1/4 m-auto flex justify-start">{icon}</p>
@@ -23,9 +24,9 @@ const SidebarDropdownItem = ({
     <Accordion.Content className="radix-state-open:animate-slideDown radix-state-closed:animate-slideUp ">
       {dropdownItems.map((subItem) => (
         <NavLink
+          className="hover:bg-blacka-1"
           key={subItem.id}
           to={subItem.path}
-          className="hover:bg-blacka-1"
         >
           <Flex className="flex flex-row w-full px-11 py-5 hover:bg-blacka-2">
             <p className="w-1/4 m-auto flex justify-start">{subItem.icon}</p>

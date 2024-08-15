@@ -1,8 +1,8 @@
+import * as Accordion from '@radix-ui/react-accordion';
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import * as Accordion from '@radix-ui/react-accordion';
+import type { SidebarNoDropdownItemType } from '../useSidebarItems';
 import SidebarNoDropdownItem from './SidebarNoDropdownItem';
-import { SidebarNoDropdownItemType } from '../useSidebarItems';
 
 describe('SidebarNoDropdownItem', () => {
   const mockItems: SidebarNoDropdownItemType[] = [
@@ -23,9 +23,9 @@ describe('SidebarNoDropdownItem', () => {
   beforeEach(() => {
     render(
       <BrowserRouter>
-        <Accordion.Root type="single" collapsible>
+        <Accordion.Root collapsible type="single">
           {mockItems.map((item) => {
-            return <SidebarNoDropdownItem {...item} />;
+            return <SidebarNoDropdownItem key={item.id} {...item} />;
           })}
         </Accordion.Root>
       </BrowserRouter>,
