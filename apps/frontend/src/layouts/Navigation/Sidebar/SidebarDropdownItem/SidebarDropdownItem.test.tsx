@@ -1,17 +1,16 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { BrowserRouter } from 'react-router-dom';
-import * as Accordion from '@radix-ui/react-accordion';
 import SidebarDropdownItem from './SidebarDropdownItem';
+import * as Accordion from '@radix-ui/react-accordion';
 import {
   SidebarDropdownItemType,
   SidebarNoDropdownItemType,
 } from '../useSidebarItems';
-import userEvent from '@testing-library/user-event';
 
 describe('SidebarDropdownItem', () => {
   const user = userEvent.setup();
 
-  const mockIcon = <span>Icon</span>;
   const mockDropdownItems: SidebarNoDropdownItemType[] = [
     {
       id: 12,
@@ -29,7 +28,7 @@ describe('SidebarDropdownItem', () => {
 
   const mockItem: SidebarDropdownItemType = {
     id: 1,
-    icon: mockIcon,
+    icon: <span>Icon</span>,
     text: 'Main Item',
     dropdownItems: mockDropdownItems,
   };
