@@ -2,8 +2,7 @@ import * as Accordion from '@radix-ui/react-accordion';
 import { Flex } from '@radix-ui/themes';
 import { NavLink } from 'react-router-dom';
 import ChevronDownIcon from '@/assets/icons/arrows/ChevronDownIcon'; // Internal import
-import type { SidebarDropdownItemType } from '../useSidebarItems'; // Type import
-
+import type { SidebarDropdownItemType } from '../useSidebarItems/useSidebarItems'; // Type import
 
 const SidebarDropdownItem = ({
   id,

@@ -1,7 +1,7 @@
 import * as Accordion from '@radix-ui/react-accordion';
 import SidebarDropdownItem from './SidebarDropdownItem/SidebarDropdownItem';
 import SidebarNoDropdownItem from './SidebarNoDropdownItem/SidebarNoDropdownItem';
-import useSidebarItems from './useSidebarItems';
+import useSidebarItems from './useSidebarItems/useSidebarItems';
 
 const SidebarItemList = (): JSX.Element => {
   const sidebarListItems = useSidebarItems();

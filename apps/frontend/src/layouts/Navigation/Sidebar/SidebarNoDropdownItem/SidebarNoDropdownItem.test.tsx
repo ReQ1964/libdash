@@ -1,7 +1,7 @@
 import * as Accordion from '@radix-ui/react-accordion';
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import type { SidebarNoDropdownItemType } from '../useSidebarItems';
+import type { SidebarNoDropdownItemType } from '../useSidebarItems/useSidebarItems';
 import SidebarNoDropdownItem from './SidebarNoDropdownItem';
 
 describe('SidebarNoDropdownItem', () => {

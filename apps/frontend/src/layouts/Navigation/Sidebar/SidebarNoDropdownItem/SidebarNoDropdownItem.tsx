@@ -1,6 +1,6 @@
 import * as Accordion from '@radix-ui/react-accordion';
 import { NavLink } from 'react-router-dom';
-import type { SidebarNoDropdownItemType } from '../useSidebarItems';
+import type { SidebarNoDropdownItemType } from '../useSidebarItems/useSidebarItems';
 
 const SidebarNoDropdownItem = ({
   id,

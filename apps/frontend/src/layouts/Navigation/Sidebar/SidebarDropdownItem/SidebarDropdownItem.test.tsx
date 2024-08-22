@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import type {
   SidebarDropdownItemType,
   SidebarNoDropdownItemType,
-} from '../useSidebarItems';
+} from '../useSidebarItems/useSidebarItems';
 import SidebarDropdownItem from './SidebarDropdownItem';
 
 describe('SidebarDropdownItem', () => {
