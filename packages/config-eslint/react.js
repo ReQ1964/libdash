@@ -35,5 +35,6 @@ module.exports = {
     'import/no-default-export': 'off',
     'no-console': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    '@typescript-eslint/no-confusing-void-expression': 'off',
   },
 };

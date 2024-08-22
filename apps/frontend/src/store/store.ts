@@ -1,10 +1,18 @@
-/* eslint-disable @typescript-eslint/no-empty-interface -- still not built */
 import { create } from 'zustand';
 
-interface ZustandState {}
+interface ZustandState {
+  username: string;
+}
 
-interface Actions {}
+interface Actions {
+  updateUsername: (name: ZustandState['username']) => void;
+}
 
-const useStore = create<ZustandState & Actions>((_set) => ({}));
+const useStore = create<ZustandState & Actions>((set) => ({
+  username: 'John Doe',
+  updateUsername: (name) => {
+    set(() => ({ username: name }));
+  },
+}));
 
 export default useStore;

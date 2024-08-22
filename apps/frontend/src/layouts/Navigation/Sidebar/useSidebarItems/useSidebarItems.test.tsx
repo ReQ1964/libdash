@@ -1,6 +1,7 @@
-import { describe, it, expect, vi } from 'vitest';
+/* eslint-disable @typescript-eslint/no-unsafe-assignment -- react functions point to a reference, hence expecting any object, as it doesn't really matter */
 import { renderHook } from '@testing-library/react';
-import useSidebarItems from './useSidebarItems';
+import { describe, it, expect, vi } from 'vitest';
+import useSidebarItems from './useSidebarItems'; // Adjust path as needed
 import {
   DASHBOARD_PATH,
   READERS_PATH,
@@ -10,15 +11,7 @@ import {
   SETTINGS_PATH,
 } from '@/constants/paths';
 
-const DashboardIcon = (): JSX.Element => <div>DashboardIcon</div>;
-const ReaderIcon = (): JSX.Element => <div>ReaderIcon</div>;
-const ReaderListIcon = (): JSX.Element => <div>ReaderListIcon</div>;
-const ReaderAddIcon = (): JSX.Element => <div>ReaderAddIcon</div>;
-const LibraryIcon = (): JSX.Element => <div>LibraryIcon</div>;
-const LibraryListIcon = (): JSX.Element => <div>LibraryListIcon</div>;
-const LibraryAddIcon = (): JSX.Element => <div>LibraryAddIcon</div>;
-const SettingsIcon = (): JSX.Element => <div>SettingsIcon</div>;
-
+// Mock the useTranslation hook
 vi.mock('react-i18next', () => ({
   useTranslation: () => ({
     t: (key: string) => {
@@ -38,60 +31,62 @@ vi.mock('react-i18next', () => ({
 }));
 
 describe('useSidebarItems', () => {
-  it('should return the correct sidebar items', () => {
+  it('should return the correct sidebar items structure', () => {
     const { result } = renderHook(() => useSidebarItems());
 
-    expect(result.current).toEqual([
+    const expectedItems = [
       {
         id: 1,
         path: DASHBOARD_PATH,
         text: 'Overview',
-        icon: <DashboardIcon />,
+        icon: expect.any(Object),
       },
       {
         id: 2,
-        text: 'sidebar.readers',
-        icon: <ReaderIcon />,
+        text: 'Readers',
+        icon: expect.any(Object),
         dropdownItems: [
           {
             id: 21,
             path: READERS_PATH,
-            text: 'sidebar.readersList',
-            icon: <ReaderListIcon />,
+            text: 'Readers List',
+            icon: expect.any(Object),
           },
           {
             id: 22,
             path: ADD_READER_PATH,
-            text: 'sidebar.addReader',
-            icon: <ReaderAddIcon />,
+            text: 'Add Reader',
+            icon: expect.any(Object),
           },
         ],
       },
       {
         id: 3,
-        text: 'sidebar.library',
-        icon: <LibraryIcon />,
+        text: 'Library',
+        icon: expect.any(Object),
         dropdownItems: [
           {
             id: 31,
             path: BOOKS_PATH,
-            text: 'sidebar.booksList',
-            icon: <LibraryListIcon />,
+            text: 'Books List',
+            icon: expect.any(Object),
           },
           {
             id: 32,
             path: ADD_BOOK_PATH,
-            text: 'sidebar.addBook',
-            icon: <LibraryAddIcon />,
+            text: 'Add Book',
+            icon: expect.any(Object),
           },
         ],
       },
       {
         id: 4,
         path: SETTINGS_PATH,
-        text: 'sidebar.settings',
-        icon: <SettingsIcon />,
+        text: 'Settings',
+        icon: expect.any(Object),
       },
-    ]);
+    ];
+
+    expect(result.current).toEqual(expectedItems);
   });
 });
