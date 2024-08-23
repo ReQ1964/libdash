@@ -38,7 +38,7 @@ const useSidebarItems = (): SidebarListItemType[] => {
     {
       id: 1,
       path: DASHBOARD_PATH,
-      text: t('sidebar.overview', { format: 'capitalise' }),
+      text: t('sidebar.overview'),
       icon: <DashboardIcon />,
     },
     {
