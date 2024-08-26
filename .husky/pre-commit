@@ -1,0 +1,6 @@
+echo '🏗️👷 Styling, testing and building your project before committing'
+
+npm run lint || { echo 'ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'; exit 1; }
+npm run typecheck || { echo 'Typescript Types Check Failed. Make the required changes listed above, add changes and try to commit again.'; exit 1; }
+
+echo '✅ All looks good'

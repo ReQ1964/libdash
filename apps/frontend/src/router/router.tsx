@@ -1,7 +1,8 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
+import { DASHBOARD_PATH } from '@/constants/paths';
 import MainLayout from '@/layouts/MainLayout';
+import DashboardPage from '@/pages/Dashboard/DashboardPage';
 import ErrorPage from '@/router/ErrorPage/ErrorPage';
-import { BASE_PAGE_PATH } from '@/constants/paths';
 
 const router = createBrowserRouter([
   {
@@ -9,8 +10,12 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: BASE_PAGE_PATH,
-        element: <ErrorPage />,
+        index: true,
+        element: <Navigate to={DASHBOARD_PATH} />,
+      },
+      {
+        path: DASHBOARD_PATH,
+        element: <DashboardPage />,
       },
     ],
   },

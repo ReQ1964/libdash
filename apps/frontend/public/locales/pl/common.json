@@ -1,0 +1,17 @@
+{
+  "settings": "ustawienia",
+  "accountSettings": "ustawienia konta",
+  "reader": "czytelnik",
+  "readers": "czytelnicy",
+  "addReader": "dodaj czytelnika",
+  "editReader": "edytuj czytelnika",
+  "book": "książka",
+  "books": "książki",
+  "addBook": "dodaj książkę",
+  "addNewBook": "dodaj nową książkę",
+  "editBook": "edytuj książkę",
+  "overview": "przegląd",
+  "eg": "n.p.",
+  "example": "przykład",
+  "logout": "wyloguj się"
+}

@@ -6,6 +6,9 @@
     "outDir": "dist",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "types": ["vitest/globals"],
+    "skipLibCheck": true,
+    "moduleResolution": "Bundler"
   }
 }
