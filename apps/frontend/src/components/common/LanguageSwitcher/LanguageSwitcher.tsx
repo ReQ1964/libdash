@@ -31,7 +31,7 @@ const LanguageSwitcher = (): JSX.Element => {
   const handleLanguageChange = (lng: string): void => void changeLanguage(lng);
   return (
     <DropdownMenu.Sub>
-      <DropdownMenu.SubTrigger>
+      <DropdownMenu.SubTrigger data-testid="language-switcher-trigger">
         <DropdownFlex>
           {currentLanguage?.flagSvg}
           <Text>{currentLanguage?.name}</Text>
@@ -41,13 +41,16 @@ const LanguageSwitcher = (): JSX.Element => {
         <Flex direction="column" gap="2">
           {languagesList.map((language) => (
             <DropdownMenu.Item
+              asChild
               key={language.language}
               onClick={() => handleLanguageChange(language.language)}
             >
-              <DropdownFlex gap="2">
-                {language.flagSvg}
-                <Text>{language.name}</Text>
-              </DropdownFlex>
+              <div>
+                <DropdownFlex gap="2">
+                  {language.flagSvg}
+                  <Text>{language.name}</Text>
+                </DropdownFlex>
+              </div>
             </DropdownMenu.Item>
           ))}
         </Flex>
