@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment -- react functions point to a reference, hence expecting any object, as it doesn't really matter */
 import { renderHook } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
-import useSidebarItems from './useSidebarItems'; // Adjust path as needed
 import {
   DASHBOARD_PATH,
   READERS_PATH,
@@ -10,6 +9,7 @@ import {
   ADD_BOOK_PATH,
   SETTINGS_PATH,
 } from '@/constants/paths';
+import useSidebarItems from './useSidebarItems'; // Adjust path as needed
 
 // Mock the useTranslation hook
 vi.mock('react-i18next', () => ({

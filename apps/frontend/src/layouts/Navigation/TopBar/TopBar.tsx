@@ -1,5 +1,5 @@
-import Sidebar from '../Sidebar/Sidebar';
 import UserProfileWithDropdown from '@/components/common/UserProfileWithPopover/UserProfileWithDropdown';
+import Sidebar from '../Sidebar/Sidebar';
 
 const TopBar = (): JSX.Element => {
   return (

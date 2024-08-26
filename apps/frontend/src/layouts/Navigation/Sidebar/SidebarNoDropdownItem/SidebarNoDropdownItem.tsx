@@ -11,7 +11,7 @@ const SidebarNoDropdownItem = ({
   <NavLink className="hover:bg-blacka-2" to={path}>
     <Accordion.Item
       className="flex flex-col align-middle p-4 py-5"
-      value={`item-${id}`}
+      value={`item-${id.toString()}`}
     >
       <Accordion.Trigger className="flex">
         <p className="w-1/4 m-auto flex justify-start">{icon}</p>

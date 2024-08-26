@@ -1,4 +1,3 @@
-/* eslint-disable import/order -- eslint's fault*/
 import * as Dialog from '@radix-ui/react-dialog';
 import { Text } from '@radix-ui/themes';
 import { NavLink } from 'react-router-dom';

@@ -9,7 +9,7 @@ interface Actions {
 }
 
 const useStore = create<ZustandState & Actions>((set) => ({
-  username: 'John Doe',
+  username: '',
   updateUsername: (name) => {
     set(() => ({ username: name }));
   },

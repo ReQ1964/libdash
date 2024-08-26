@@ -13,7 +13,7 @@ const SidebarDropdownItem = ({
   <Accordion.Item
     className="flex flex-col overflow-hidden"
     key={id}
-    value={`item-${id}`}
+    value={`item-${id.toString()}`}
   >
     <Accordion.Trigger className="flex p-4 py-5 hover:bg-blacka-2 group">
       <p className="w-1/4 m-auto flex justify-start">{icon}</p>

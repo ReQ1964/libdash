@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import DropdownFlex from './DropdownFlex';
 
 describe('DropdownFlex', () => {
-  it('renders children correctly', () => {
+  it('should render children correctly', () => {
     render(
       <DropdownFlex>
         <div>Child 1</div>
@@ -15,7 +15,7 @@ describe('DropdownFlex', () => {
     expect(screen.getByText('Child 2')).toBeInTheDocument();
   });
 
-  it('applies the default className and styles', () => {
+  it('should apply the default className and styles', () => {
     const { container } = render(
       <DropdownFlex>
         <div>Child 1</div>

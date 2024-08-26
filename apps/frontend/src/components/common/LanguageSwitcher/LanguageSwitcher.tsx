@@ -1,8 +1,8 @@
 import { DropdownMenu, Flex, Text } from '@radix-ui/themes';
 import i18next, { changeLanguage } from 'i18next';
-import DropdownFlex from '../../ui/DropdownFlex/DropdownFlex';
 import FlagIconEN from '@/assets/icons/flags/FlagIconEN';
 import FlagIconPL from '@/assets/icons/flags/FlagIconPL';
+import DropdownFlex from '../../ui/DropdownFlex/DropdownFlex';
 
 interface LanguageType {
   language: string;
